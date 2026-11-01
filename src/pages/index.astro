@@ -1,0 +1,7 @@
+---
+import Page from '../layouts/Page.astro';
+import Identity from '../components/Identity.astro';
+import { getCopy } from '../i18n';
+const copy = getCopy('en');
+---
+<Page locale="en" copy={copy}><Identity copy={copy} /></Page>

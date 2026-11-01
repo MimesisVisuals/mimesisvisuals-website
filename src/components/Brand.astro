@@ -1,0 +1,8 @@
+---
+import { site } from '../config/site';
+const { label } = Astro.props;
+const logoUrl = `${import.meta.env.BASE_URL}${site.logo}`;
+---
+<a class="brand" href="#top" aria-label={label}>
+  {site.logo ? <img src={logoUrl} alt={site.name} width="156" height="38" /> : <span>{site.name}<span class="brand-dot" aria-hidden="true">.</span></span>}
+</a>

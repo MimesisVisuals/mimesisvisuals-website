@@ -1,0 +1,15 @@
+/* Brand integration: palette, type and shape live here. System fonts support Greek. */
+:root {
+  --color-paper: #f5f4ef;
+  --color-ink: #242622;
+  --color-muted: #65675f;
+  --color-rule: #d1d2c9;
+  --color-accent: #59674d;
+  --color-dark: #252c27;
+  --color-on-dark: #f5f4ef;
+  --font-body: Arial, 'Helvetica Neue', sans-serif;
+  --font-display: var(--font-body);
+  --font-detail: 'Courier New', monospace;
+  --content-width: 1320px;
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+}

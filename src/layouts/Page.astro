@@ -1,0 +1,24 @@
+---
+import '../styles/global.css';
+import type { Locale, Copy } from '../i18n';
+interface Props { locale: Locale; copy: Copy }
+const { locale, copy } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={copy.description} />
+    <meta name="theme-color" content="#f5f4ef" />
+    <title>{copy.title}</title>
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={copy.title} />
+    <meta property="og:description" content={copy.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={locale === 'en' ? 'en_GB' : 'el_GR'} />
+  </head>
+  <body><a class="skip-link" href="#main">{copy.skip}</a><slot /></body>
+</html>
